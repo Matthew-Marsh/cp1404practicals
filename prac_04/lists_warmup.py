@@ -3,8 +3,8 @@ numbers = [3, 1, 4, 1, 5, 9, 2]
 # numbers[0]: 3
 # numbers[-1]: 2
 # numbers[3]: 1
-# numbers[:-1]: [3, 1, 4, 1, 5, 9, 2]
-# numbers[3:4]: [1, 5]
+# numbers[:-1]: [3, 1, 4, 1, 5, 9, 2] x [3, 1, 4, 1, 5, 9]
+# numbers[3:4]: [1, 5] x [1]
 # 5 in numbers: True
 # 7 in numbers: False
 # "3" in numbers: False
