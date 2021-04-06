@@ -9,7 +9,7 @@ HEX_COLOUR_DICT = {"aquamarine": "#458b74",
                    "gainsboro": "#dcdcdc",
                    "khaki": "#f0e68c",
                    "lavender": "#e6e6fa",
-                   "maroon": "	#b03060",
+                   "maroon": "#b03060",
                    "orchid": "#da70d6"}
 
 colour_name = input("Enter colour name: ")
