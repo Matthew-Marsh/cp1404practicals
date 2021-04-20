@@ -3,7 +3,7 @@
 class ProgrammingLanguage:
     """ Programming language and its attributes  """
 
-    def __init__(self, name, typing, reflection, year):
+    def __init__(self, name="", typing="", reflection="", year=0):
         """ Initialise programming language with attributes """
         self.name = name
         self.typing = typing
