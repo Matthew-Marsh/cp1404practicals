@@ -39,7 +39,7 @@ class ConvertMilesToKmApp(App):
             number = int(number)
             number += increment
             self.root.ids.input_number.text = str(number)
-            self.kilometres = str(number * MILE_TO_KM)
+            self.kilometres = number * MILE_TO_KM
         except ValueError:
             self.kilometres = '0.0'
 
