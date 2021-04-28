@@ -9,6 +9,7 @@ BoxLayout:
             multiline: False
             text: '0'
             font_size: 30
+            on_text: app.calculate_button_press()
 
         BoxLayout:
             orientation: 'vertical'
@@ -17,19 +18,19 @@ BoxLayout:
                 text: 'Up'
                 color: (1, 1, 1, 1)
                 font_size: 30
-                on_press: app.handle_increment(int(input_number.text), 1)
+                on_press: app.handle_increment(input_number.text, 1)
 
             Button:
                 text: 'Down'
                 color: (1, 1, 1, 1)
                 font_size: 30
-                on_press: app.handle_increment(int(input_number.text), -1)
+                on_press: app.handle_increment(input_number.text, -1)
 
-    Button:
-        text: 'Convert miles to km'
-        color: (1, 1, 1, 1)
-        font_size: 30
-        on_press: app.calculate_button_press()
+#    Button:
+#        text: 'Convert miles to km'
+#        color: (1, 1, 1, 1)
+#        font_size: 30
+#        on_press: app.calculate_button_press()
 
     Label:
         text: app.kilometres

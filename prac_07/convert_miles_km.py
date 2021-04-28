@@ -26,12 +26,22 @@ class ConvertMilesToKmApp(App):
 
     def calculate_button_press(self):
         """ calculate the km converted from the input miles """
-        self.kilometres = str(int(self.root.ids.input_number.text) * MILE_TO_KM)
+        try:
+            self.kilometres = str(int(self.root.ids.input_number.text) * MILE_TO_KM)
+        except ValueError:
+            self.kilometres = '0.0'
 
     def handle_increment(self, number=0, increment=1):
         """ increase the input number by the increment """
-        number += increment
-        self.root.ids.input_number.text = str(number)
+        try:
+            if number == "":
+                number = 0
+            number = int(number)
+            number += increment
+            self.root.ids.input_number.text = str(number)
+            self.kilometres = str(number * MILE_TO_KM)
+        except ValueError:
+            self.kilometres = '0.0'
 
 
 ConvertMilesToKmApp().run()
