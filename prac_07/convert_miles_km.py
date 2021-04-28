@@ -28,5 +28,10 @@ class ConvertMilesToKmApp(App):
         """ calculate the km converted from the input miles """
         self.kilometres = str(int(self.root.ids.input_number.text) * MILE_TO_KM)
 
+    def handle_increment(self, number=0, increment=1):
+        """ increase the input number by the increment """
+        number += increment
+        self.root.ids.input_number.text = str(number)
+
 
 ConvertMilesToKmApp().run()
