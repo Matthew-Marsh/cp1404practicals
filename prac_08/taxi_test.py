@@ -4,7 +4,7 @@ from prac_08.taxi import Taxi
 
 def main():
     """Test the taxi and car classes."""
-    taxi = Taxi('Prius 1', 100, 1.23)
+    taxi = Taxi('Prius 1', 100)
     taxi.drive(40)
     print("{} Total: ${:.2f}".format(taxi, taxi.get_fare()))
     taxi.start_fare()
