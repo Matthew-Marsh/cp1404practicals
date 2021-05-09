@@ -26,6 +26,8 @@ def main():
             elif menu_choice == 'd':
                 if current_taxi is None:
                     print("You need to choose a taxi before you can drive.")
+                else:
+                    fare_total = calculate_fare_total(current_taxi)
             else:
                 print("Invalid option")
             print("Bill to date: ${:.2f}".format(fare_total))
@@ -33,7 +35,7 @@ def main():
         except IndexError:
             print('Invalid taxi choice')
         except ValueError:
-            print("Taxi choice must be a number.")
+            print("Taxi choice must be a number")
 
 
 def get_taxi_choice(taxis):
@@ -43,6 +45,18 @@ def get_taxi_choice(taxis):
         print(i, '-', taxi)
     taxi_choice = int(input("Choose taxi: "))
     return taxis[taxi_choice]
+
+
+def calculate_fare_total(taxi):
+    fare_total = 0
+    while fare_total == 0:
+        try:
+            distance = float(input("Drive how far? "))
+            taxi.drive(distance)
+            fare_total = taxi.get_fare()
+            return fare_total
+        except ValueError:
+            print("Distance must be a number")
 
 
 if __name__ == '__main__':
