@@ -1,7 +1,6 @@
 """
 CP1404/CP5632 Practical
 Demos of various os module examples
-MOdifications by Matthew Marsh
 """
 import shutil
 import os
@@ -19,10 +18,8 @@ def main():
 
     # Make a new directory
     # The next time you run this, it will crash if the directory exists
-    try:
-        os.mkdir('temp')
-    except FileExistsError:
-        pass
+    # TODO: Use exception handling to avoid the crash (just pass)
+    os.mkdir('temp')
 
     # Loop through each file in the (current) directory
     for filename in os.listdir('.'):
@@ -56,11 +53,8 @@ def demo_walk():
         print("\tand files:", filenames)
         print("(Current working directory is: {})".format(os.getcwd()))
 
-        for filename in filenames:
-            new_name = get_fixed_filename(filename)
-            old_name_path = os.path.join(directory_name, filename)
-            new_name_path = os.path.join(directory_name, new_name)
-            os.rename(old_name_path, new_name_path)
+        # TODO: add a loop to rename the files
 
-# main()
-demo_walk()
+
+main()
+# demo_walk()
