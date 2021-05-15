@@ -1,4 +1,4 @@
-""" Processes the files in the directory and sorts them into their appropriate folders. """
+""" Processes the files in the directory and sorts them into the appropriate folder. """
 import shutil
 import os
 
