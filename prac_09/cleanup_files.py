@@ -1,7 +1,6 @@
 """
 Cleanup file for Intermediate Exercises
 """
-
 import os
 
 
@@ -23,17 +22,7 @@ def main():
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
-    new_name = filename.replace(" ", "_")
-    word = ''
-    for i,letter in enumerate(new_name):
-        if new_name[i].isupper() and new_name[i-1].islower() and i > 0:
-            word = word + '_' + new_name[i]
-        else:
-            word = word + new_name[i]
-    new_name = word
-    parts = new_name.split('_')
-    new_name = '_'.join(parts).title()
-    new_name = new_name.replace(".Txt", ".txt")
+    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
     return new_name
 
 
