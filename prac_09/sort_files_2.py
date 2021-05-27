@@ -4,7 +4,7 @@ import os
 
 
 def main():
-    """ Sort through the files in the directory and put them into their appropriate extension directories """
+    """Sort through the files in the directory and put them into their appropriate extension directories."""
     os.chdir('FilesToSort')
 
     extensions = []
@@ -27,7 +27,7 @@ def main():
 
 
 def get_extension_to_folder(extensions):
-    """ Gets the folder names that the user wants to sort files into. """
+    """Gets the folder names that the user wants to sort files into."""
     extension_to_folder = {}
     for extension in extensions:
         extension_to_folder[extension] = input("What category would you like to sort {} files into? ".format(extension))
@@ -35,7 +35,7 @@ def get_extension_to_folder(extensions):
 
 
 def move_files(extension_to_folder):
-    """ Moves files according to the user's choices in dictionary. """
+    """Moves files according to the user's choices in dictionary."""
     for filename in os.listdir('.'):
         if os.path.isdir(filename):
             continue

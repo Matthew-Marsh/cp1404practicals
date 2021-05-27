@@ -4,7 +4,7 @@ import os
 
 
 def main():
-    """ Sort through the files in the directory and put them into their appropriate extension directories """
+    """Sort through the files in the directory and put them into their appropriate extension directories."""
     os.chdir('FilesToSort')
 
     created_directories = []
